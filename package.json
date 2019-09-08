@@ -1,0 +1,18 @@
+{
+  "name": "slack-bolt-timetree-app",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^1.2.0"
+  }
+}
