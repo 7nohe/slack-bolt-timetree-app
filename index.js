@@ -15,7 +15,9 @@ app.error(err => {
 app.command("/timetree", async ({ command, ack, say }) => {
   // コマンドリクエストを確認
   ack();
-  const [ commandName, calendarName, title, startAt, endAt ] = command.text.split(/(\s+)/);
+  const [commandName, calendarName, title, startAt, endAt] = command.text.split(
+    /(\s+)/
+  );
   switch (commandName) {
     case "list": // カレンダー一覧コマンド
       const calendarList = await getCalendarListMessage();
@@ -25,7 +27,8 @@ app.command("/timetree", async ({ command, ack, say }) => {
       const result = await createEvent(calendarName, title, startAt, endAt);
       say(result);
       break;
-    default: // 該当なし
+    default:
+      // 該当なし
       say("そのコマンドには対応していません");
   }
 });
