@@ -15,7 +15,7 @@ app.error(err => {
 app.command("/timetree", async ({ command, ack, say }) => {
   // コマンドリクエストを確認
   ack();
-  const [ commandName, calendarName, title, startAt, endAt ] = command.text.split(' ');
+  const [ commandName, calendarName, title, startAt, endAt ] = command.text.split(/(\s+)/);
   switch (commandName) {
     case "list": // カレンダー一覧コマンド
       const calendarList = await getCalendarListMessage();
