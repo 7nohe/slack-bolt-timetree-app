@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@slack/bolt": "^1.2.0",
+    "@slack/bolt": "^2.7.0",
     "node-fetch": "^2.6.1"
   }
 }
